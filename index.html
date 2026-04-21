@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>破冰 · 自我介绍卡</title>
+  <!-- Google Font & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* 精确尺寸 1920x1080，简约背景 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: #eaf0f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 主卡片 */
+    .glass-card {
+      width: 1400px;
+      height: 900px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 48px;
+      box-shadow: 0 20px 40px rgba(0, 20, 40, 0.15);
+      padding: 48px 60px;
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      overflow-y: auto;
+      border: 1px solid rgba(255,255,255,0.7);
+    }
+    .glass-card::-webkit-scrollbar { width: 6px; }
+    .glass-card::-webkit-scrollbar-thumb { background: #b0c8da; border-radius: 10px; }
+
+    /* 左侧资料卡 — 垂直居中 */
+    .left-profile {
+      flex: 1.2;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255,255,255,0.5);
+      border-radius: 36px;
+      padding: 30px 20px;
+      border: 1px solid white;
+    }
+    .avatar-wrapper {
+      width: 200px;
+      height: 200px;
+      border-radius: 0;           /* 方形 */
+      padding: 5px;
+      background: #9bb7d4;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      border: 3px solid white;
+      object-fit: cover;
+      background-color: #cfdeed;
+      display: block;
+    }
+    .left-profile h2 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #1e3b4f;
+      margin-bottom: 8px;
+    }
+    .info-line {
+      font-size: 1.2rem;
+      color: #2c4e66;
+      margin: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+    }
+    .info-line i {
+      width: 24px;
+      color: #3f7b9c;
+    }
+    .today-info {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.6);
+      padding: 10px 20px;
+      border-radius: 40px;
+      color: #16364b;
+      border: 1px dashed #8ab3c7;
+    }
+    .motto {
+      margin-top: 18px;
+      font-size: 1rem;
+      color: #406e88;
+    }
+
+    /* 右侧自我介绍区域 */
+    .right-content {
+      flex: 2.2;
+      display: flex;
+      flex-direction: column;
+    }
+    .right-content h1 {
+      font-size: 3.8rem;
+      font-weight: 700;
+      color: #0c3346;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      margin-top: 0;              /* 与顶部对齐，无问候语后自然靠上 */
+    }
+    .right-content h1 span {
+      background: linear-gradient(120deg, #326c8f, #174d68);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .bio {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #1d4055;
+      background: rgba(255,255,255,0.4);
+      padding: 18px 26px;
+      border-radius: 24px;
+      margin: 15px 0 20px;
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 20px;
+    }
+    .tag {
+      background: rgba(255,255,255,0.8);
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      color: #1a4f6e;
+      border: 1px solid white;
+    }
+    .tag i {
+      margin-right: 6px;
+      color: #3b7f9e;
+    }
+    .quote {
+      font-style: italic;
+      margin-top: 30px;
+      color: #2d5c79;
+      border-left: 4px solid #558caa;
+      padding-left: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-card">
+    <!-- 左侧个人信息（垂直居中） -->
+    <div class="left-profile">
+      <div class="avatar-wrapper">
+        <!-- 请将您的头像照片放在同一文件夹，命名为 avatar.jpg (或修改下方src) -->
+         <img src="avatar1.jpg" width="190"   alt="">
+      </div>
+      <h2>唐勤洋</h2>
+      <div class="info-line"><i class="fas fa-graduation-cap"></i> 产品设计 · 大一</div>
+      <div class="info-line"><i class="fas fa-map-pin"></i> 广东肇庆</div>
+      <div class="info-line"><i class="fas fa-heart" style="color: #c13b5f;"></i> 旅行</div>
+      <!-- 动态日期 -->
+      <div class="today-info" id="todayDate"></div>
+      <div class="motto"><i class="fas fa-feather-alt"></i> 保持好奇，持续进步</div>
+    </div>
+
+    <!-- 右侧自我介绍（已删除“破冰快乐”问候语） -->
+    <div class="right-content">
+      <h1>关于 <span>我</span> · ABOUT YOU</h1>
+      <div class="bio">
+        🌟 我是唐勤洋，来自湖南，平时喜欢做手工打游戏，喜欢听歌看小说，喜欢一个人出去旅行，希望能和大家好好相处，共同进步。
+      </div>
+      <div class="skill-tags">
+        <span class="tag"><i class="fab fa-react"></i> ai</span>
+        <span class="tag"><i class="fab fa-vuejs"></i> 小说</span>
+        <span class="tag"><i class="fas fa-mobile-alt"></i> 游戏</span>
+        <span class="tag"><i class="fas fa-paint-brush"></i> 美食</span>
+        <span class="tag"><i class="fas fa-map-marked-alt"></i> 旅行</span>
+        <span class="tag"><i class="fas fa-hiking"></i> 徒步</span>
+      </div>
+
+      <div class="quote">“Design is not just what it looks like, design is how it works.” — Steve Jobs</div>
+      <p style="color: #4c6f86; margin-top: 15px; font-size: 0.9rem;">
+        <i class="far fa-edit"></i> 
+      </p >
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // 显示当天日期
+      const today = new Date();
+      const year = today.getFullYear();
+      const month = today.getMonth() + 1;
+      const day = today.getDate();
+      const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+      const weekday = weekdays[today.getDay()];
+      document.getElementById('todayDate').innerText = `📅 ${year}年${month}月${day}日 ${weekday}`;
+    })();
+  </script>
+</body>
+</html>
